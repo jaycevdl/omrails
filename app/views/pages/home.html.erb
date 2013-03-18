@@ -1,13 +1,20 @@
 
 <div class="hero-unit" >
 
-<h1>The Monthly Photographer</h1>
+	<h1>The Monthly Photographer</h1>
 
-<p>
-	A monthly photogahper challenge
-</p>
+			<p>
+				A monthly photogahper challenge
+			</p>
 
-<p>
-	<%= link_to "Sign Up Now", new_user_registration_path, class: "btn btn-primary btn-large" %>
-</p>
+	<% if user_signed_in? %>
+			<p>
+				<h4>You're Logged In!</h4>
+			</p>
+	<% else %>
+
+			<p>
+				<%= link_to "Sign Up Now", new_user_registration_path, class: "btn btn-primary btn-large" %>
+			</p>
+	<% end %>
 </div>
